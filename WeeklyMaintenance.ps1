@@ -1,6 +1,10 @@
-﻿#This script will do 
+﻿#This script will do four things:
+## Clear cache from temporary files
+## Empty the Recycle bin
+## Get and install Windows updates
+## Restart the computer to apply updates
 
-#Clear all cache and temporary files
+#Clear cache and temporary files
 echo "Clearing Cache and Temporary Files . . ."
 set-location 'c:\users'
 remove-item '.\*\appdata\local\temp\*' -recurse -force -ErrorAction SilentlyContinue
@@ -15,6 +19,6 @@ get-windowsupdate -force
 echo "Installing Windows updates . . ."
 install-windowsupdate -force
 
-#Restart computer to apply updates
+#Restart computer
 echo "Restarting computer . . ."
 restart-computer -force
