@@ -1,6 +1,6 @@
-﻿set-location 'c:\users';
-remove-item '.\*\appdata\local\temp\*' -recurse -force;
-clear-recyclebin;
-get-windowsupdate;
-install-windowsupdate;
-restart-computer -force;
+﻿set-location 'c:\users'
+remove-item '.\*\appdata\local\temp\*' -recurse -force -ErrorAction SilentlyContinue
+clear-recyclebin -force
+get-windowsupdate -force
+install-windowsupdate -force
+restart-computer -force
