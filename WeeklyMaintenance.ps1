@@ -15,9 +15,9 @@ Clear-RecycleBin -Force
 
 #Get and install windows updates
 echo "Updating Windows . . ."
-Get-WindowsUpdate -Force
+Get-WindowsUpdate -ForceDownload
 echo "Installing Windows updates . . ."
-Install-WindowsUpdate -Force
+Install-WindowsUpdate -ForceInstall
 
 #Restart computer
 echo "Restarting computer . . ."
