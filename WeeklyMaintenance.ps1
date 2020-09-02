@@ -6,19 +6,19 @@
 
 #Clear cache and temporary files
 echo "Clearing Cache and Temporary Files . . ."
-set-location 'c:\users'
-remove-item '.\*\appdata\local\temp\*' -recurse -force -ErrorAction SilentlyContinue
+Set-Location 'c:\users'
+Remove-Item '.\*\appdata\local\temp\*' -Recurse -Force -ErrorAction SilentlyContinue
 
 #Empty the Recycle Bin
 echo "Emptying the Recycle Bin . . ."
-clear-recyclebin -force
+Clear-RecycleBin -Force
 
 #Get and install windows updates
 echo "Updating Windows . . ."
-get-windowsupdate -force
+get-windowsupdate -Force
 echo "Installing Windows updates . . ."
-install-windowsupdate -force
+install-windowsupdate -Force
 
 #Restart computer
 echo "Restarting computer . . ."
-restart-computer -force
+Restart-Computer -force
