@@ -18,6 +18,7 @@ Set-Location $HOME
 Write-Host "Removing files in Downloads folder . . ." -ForegroundColor Red
 Set-Location 'C:\users\kwilk\Downloads'
 Remove-Item * -Recurse -Force -ErrorAction SilentlyContinue
+Set-Location $HOME #Return to home directory
 
 #Empty the Recycle Bin
 Write-Host "Emptying the Recycle Bin . . ." -ForegroundColor Red
