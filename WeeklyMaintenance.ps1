@@ -5,25 +5,30 @@
 ## Get and install Windows updates
 ## Restart the computer to apply updates
 
+# Set ErrorAction preference
+$ErrorActionPreference = 'SilentlyContinue'
+
 # Clear cache and temporary files
-echo "Clearing Cache and Temporary Files . . ."
+Write-Host "Removing Cache and Temporary Files . . ." -ForegroundColor Red
 Set-Location 'c:\users'
 Remove-Item '.\*\appdata\local\temp\*' -Recurse -Force -ErrorAction SilentlyContinue
+Set-Location $HOME
 
 # Remove files in Downloads directory
+Write-Host "Removing files in Downloads folder . . ." -ForegroundColor Red
 Set-Location 'C:\users\kwilk\Downloads'
 Remove-Item * -Recurse -Force -ErrorAction SilentlyContinue
 
 #Empty the Recycle Bin
-echo "Emptying the Recycle Bin . . ."
+Write-Host "Emptying the Recycle Bin . . ." -ForegroundColor Red
 Clear-RecycleBin -Force
 
 # Get and install windows updates
-echo "Updating Windows . . ."
+Write-Host "Updating Windows . . ." -ForegroundColor Red
 Get-WindowsUpdate -ForceDownload
-echo "Installing Windows updates . . ."
+Write-Host "Installing Windows updates . . ." -ForegroundColor Red
 Install-WindowsUpdate -ForceInstall
 
 # Restart computer
-echo "Restarting computer . . ."
-Restart-Computer -force
+Write-Host "Restarting computer . . ." -ForegroundColor Yellow -BackgroundColor DarkMagenta
+Restart-Computer -Force
