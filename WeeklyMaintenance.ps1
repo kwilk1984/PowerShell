@@ -27,7 +27,7 @@ Clear-RecycleBin -Force
 Write-Host "Updating Windows . . ." -ForegroundColor Red
 Get-WindowsUpdate -ForceDownload
 Write-Host "Installing Windows updates . . ." -ForegroundColor Red
-Install-WindowsUpdate -ForceInstall
+Install-WindowsUpdate -ForceInstall -AcceptAll
 
 # Restart computer
 Write-Host "Restarting computer . . ." -ForegroundColor Yellow -BackgroundColor DarkMagenta
