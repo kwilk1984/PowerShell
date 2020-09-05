@@ -32,7 +32,5 @@ Set-Location $HOME #Return to home directory
 # Start wanted processes
 Write-Host "Starting Mozilla Thunderbird . . ." -ForegroundColor Green
 Start-Process thunderbird -WindowStyle Minimized
-Write-Host "Starting Discord  . . ." -ForegroundColor Green
-Start-Process Discord -WindowStyle Minimized
 Write-Host "Starting Chrome  . . ." -ForegroundColor Green
 Start-Process chrome -WindowStyle Minimized
