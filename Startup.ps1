@@ -26,6 +26,9 @@ git pull
 Set-Location 'C:\users\kwilk\Documents\Repositories\MyWebsite'
 Write-Host "Pulling repository updates for MyWebsite . . ." -ForegroundColor Cyan
 git pull
+Set-Location 'C:\users\kwilk\Documents\Repositories\DiscordBots'
+Write-Host "Pulling repository updates for DiscordBots . . ." -ForegroundColor Cyan
+git pull
 
 Set-Location $HOME #Return to home directory
 
