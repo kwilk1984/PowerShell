@@ -6,16 +6,18 @@
 # Set ErrorAction preference
 $ErrorActionPreference = 'SilentlyContinue'
 
-# Soft close 
+# Soft close programs
 Get-Process chrome | ForEach-Object {
     $_.CloseMainWindow() | Out-Null
     }
 Get-Process powershell_ise | ForEach-Object {
     $_.CloseMainWindow() | Out-Null
-    }    
+    }
+Get-Process Discord | ForEach-Object {
+    $_.CloseMainWindow() | Out-Null
+    }
 
-# Stop email and chat client
-Stop-Process -Name Discord -Force -ErrorAction SilentlyContinue
+# Force stop email client
 Stop-Process -Name thunderbird -Force -ErrorAction SilentlyContinue
 
 # Shutdown computer
