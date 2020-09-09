@@ -20,12 +20,15 @@ Set-Location $HOME
 Set-Location 'C:\users\kwilk\Documents\Repositories\PowerShell'
 Write-Host "Pulling repository updates for PowerShell . . ." -ForegroundColor Cyan
 git pull
+
 Set-Location 'C:\users\kwilk\Documents\Repositories\CPP'
 Write-Host "Pulling repository updates for CPP . . ." -ForegroundColor Cyan
 git pull
+
 Set-Location 'C:\users\kwilk\Documents\Repositories\MyWebsite'
 Write-Host "Pulling repository updates for MyWebsite . . ." -ForegroundColor Cyan
 git pull
+
 Set-Location 'C:\users\kwilk\Documents\Repositories\StMaryMagdalen'
 Write-Host "Pulling repository updates for StMaryMagdalen . . ." -ForegroundColor Cyan
 git pull
