@@ -8,6 +8,20 @@
 # Set ErrorAction preference
 $ErrorActionPreference = 'SilentlyContinue'
 
+# Soft close programs
+Get-Process chrome | ForEach-Object {
+    $_.CloseMainWindow() | Out-Null
+    }
+Get-Process powershell_ise | ForEach-Object {
+    $_.CloseMainWindow() | Out-Null
+    }
+Get-Process Discord | ForEach-Object {
+    $_.CloseMainWindow() | Out-Null
+    }
+Get-Process notepad++ | ForEach-Object {
+    $_.CloseMainWindow() | Out-Null
+    }
+
 # Clear cache and temporary files
 Write-Host "Removing Cache and Temporary Files . . ." -ForegroundColor Red
 Set-Location 'c:\users'
