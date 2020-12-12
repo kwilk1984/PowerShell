@@ -1,6 +1,8 @@
-﻿#This script will do four things:
+﻿#This script will do six (6) things:
+## Close some processes to prepare for rebooting
 ## Clear cache from temporary files
 ## Remove files in Downloads directory
+## Defrag the HDD
 ## Empty the Recycle bin
 ## Get and install Windows updates
 ## Restart the computer to apply updates
@@ -34,9 +36,13 @@ Set-Location 'C:\users\kwilk\Downloads'
 Remove-Item * -Recurse -Force -ErrorAction SilentlyContinue
 Set-Location $HOME #Return to home directory
 
-#Empty the Recycle Bin
+# Empty the Recycle Bin
 Write-Host "Emptying the Recycle Bin . . ." -ForegroundColor Red
 Clear-RecycleBin -Force
+
+# Defrag HDD
+Write-Host "Defragging hard disk . . ." -ForegroundColor Red
+defrag /c /h /o /u
 
 # Get and install windows updates
 Write-Host "Updating Windows . . ." -ForegroundColor Red
