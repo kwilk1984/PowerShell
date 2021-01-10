@@ -1,4 +1,4 @@
-﻿#This script will do six (6) things:
+﻿# This script will perform seven (7) tasks:
 ## Close some processes to prepare for rebooting
 ## Clear cache from temporary files
 ## Remove files in Downloads directory
